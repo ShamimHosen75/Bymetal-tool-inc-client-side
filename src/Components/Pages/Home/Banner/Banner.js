@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import bg from '../../../../images/banner-bg.jpg'
+import bg from '../../../../images/banner-bg.jpg';
 
 const Banner = () => {
     return (
@@ -10,8 +10,8 @@ const Banner = () => {
                 <Row className="g-2">
                     <Col className="d-flex  align-items-center" md={6}>
                         <div>
-                            <h2>A BROAD RANGE OF TRENDY EYEWEAR </h2>
-                            <p>Perfect look with a suitable pair of glasses. Put on eyewear & put on positive view mode.</p>
+                            <h2>We Are Manufacturing Products with World Class</h2>
+                            <p>Industry has consistently embraced innovation to provide a superior level of excellentce for all over valuable customers.</p>
                             <Link className="btn btn-dark" to="/explore">
                                 Shop Now
                             </Link>

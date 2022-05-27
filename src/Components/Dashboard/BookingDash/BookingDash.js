@@ -8,7 +8,7 @@ const BookingDash = () => {
 
   //get data
   useEffect(() => {
-    fetch('https://obscure-sierra-48545.herokuapp.com/allBooking')
+    fetch('https://afternoon-retreat-54243.herokuapp.com/allBooking')
       .then(res => res.json())
       .then(data => {
         setBookings(data);
@@ -20,7 +20,7 @@ const BookingDash = () => {
   const handleDelete = id => {
     const handleConfirm = window.confirm('Are you sure to delete');
     if (handleConfirm) {
-      fetch(`https://obscure-sierra-48545.herokuapp.com/deleteBooking/${id}`, {
+      fetch(`https://afternoon-retreat-54243.herokuapp.com/deleteBooking/${id}`, {
         method: 'DELETE',
         headers: {
           'content-type': 'application/json',
@@ -47,7 +47,7 @@ const BookingDash = () => {
     data.status = 'Shipped';
 
     if (handleConfirm) {
-      fetch(`https://obscure-sierra-48545.herokuapp.com/update/${id}`, {
+      fetch(`https://afternoon-retreat-54243.herokuapp.com/update/${id}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',

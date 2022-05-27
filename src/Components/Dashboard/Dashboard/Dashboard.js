@@ -35,7 +35,7 @@ function Dashboard(props) {
 
   
   useEffect(() => {
-    fetch('https://obscure-sierra-48545.herokuapp.com/admins')
+    fetch('https://afternoon-retreat-54243.herokuapp.com/admins')
       .then(res => res.json())
       .then(data => {
         data.forEach(admin => {

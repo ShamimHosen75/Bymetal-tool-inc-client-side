@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
-import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 const OrderDetails = () => {
@@ -12,13 +12,13 @@ const OrderDetails = () => {
   const { productId } = useParams();
   //get data
   useEffect(() => {
-    fetch('https://obscure-sierra-48545.herokuapp.com/products')
+    fetch('https://afternoon-retreat-54243.herokuapp.com/products')
       .then(res => res.json())
       .then(data => setProducts(data));
   }, [isSubmit]);
 
   //find data
-  const displayProuduct = products.find(product => product._id == productId);
+  const displayProuduct = products.find(product => product._id === productId);
 
   // submit booking data
   const onSubmit = data => {
@@ -31,7 +31,7 @@ const OrderDetails = () => {
     displayProuduct._id = displayProuduct._id + 1;
 
     axios
-      .post('https://obscure-sierra-48545.herokuapp.com/bookingProduct', displayProuduct)
+      .post('https://afternoon-retreat-54243.herokuapp.com/bookingProduct', displayProuduct)
       .then(res => {
         if (res.data.insertedId) {
           alert('Order successfully');

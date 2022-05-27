@@ -7,7 +7,7 @@ const MakeAdmin = () => {
   const onSubmit = data => {
     console.log(data);
 
-    axios.post('https://obscure-sierra-48545.herokuapp.com/makeAdmin', data).then(res => {
+    axios.post('https://afternoon-retreat-54243.herokuapp.com/makeAdmin', data).then(res => {
       if (res.data.insertedId) {
         alert('added successfully');
         reset();

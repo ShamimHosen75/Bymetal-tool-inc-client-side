@@ -7,7 +7,7 @@ const ManageProduct = () => {
     const [isDeleted, setIsDeleted] = useState(null);
 
   useEffect(() => {
-    fetch('https://obscure-sierra-48545.herokuapp.com/products')
+    fetch('https://afternoon-retreat-54243.herokuapp.com/products')
       .then(res => res.json())
       .then(data => {
         setProducts(data);
@@ -17,7 +17,7 @@ const ManageProduct = () => {
   const handleDelete = id => {
     const handleConfirm = window.confirm('Are you sure to delete');
     if (handleConfirm) {
-      fetch(`https://obscure-sierra-48545.herokuapp.com/deleteProduct/${id}`, {
+      fetch(`https://afternoon-retreat-54243.herokuapp.com/deleteProduct/${id}`, {
         method: 'DELETE',
         headers: {
           'content-type': 'application/json',

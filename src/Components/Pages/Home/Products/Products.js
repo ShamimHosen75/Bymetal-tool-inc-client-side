@@ -6,7 +6,7 @@ const Products = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('https://obscure-sierra-48545.herokuapp.com/products')
+    fetch('https://afternoon-retreat-54243.herokuapp.com/products')
       .then(res => res.json())
       .then(data => {
         setProducts(data);
@@ -27,11 +27,13 @@ const Products = () => {
         </div>
         <div>
           <Row xs={1} sm={2} md={3} className="g-4 bg-white rounded-3">
-            {products.map((product, index) => {
-              if (index < 6) {
-                return <Product key={product._id} product={product}></Product>;
-              }
-            })}
+            {
+              products.map((product, index) => {
+                if (index < 6) {
+                  return <Product key={product._id} product={product}></Product>;
+                }
+              })
+            }
           </Row>
         </div>
       </div>

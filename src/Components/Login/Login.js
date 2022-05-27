@@ -3,20 +3,20 @@ import {
   Button,
   CircularProgress,
   Container,
-  Grid,
+  Grid
 } from '@mui/material';
-import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import loginImage from '../../images/login.png';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import loginImage from '../../images/login.png';
 import './Login.css';
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
   const { user, loginUserByEmail, isLoading, error, signInWithGoogle } =
     useAuth();
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
   const handleOnChange = e => {
     const field = e.target.name;
@@ -26,7 +26,7 @@ const Login = () => {
     setLoginData(newLoginData);
   };
   const handleLoginSubmit = e => {
-    loginUserByEmail(loginData.email, loginData.password, history, location);
+    loginUserByEmail(loginData.email, loginData.password, navigate, location);
     e.preventDefault();
   };
   return (
@@ -89,7 +89,7 @@ const Login = () => {
               <br />
               <Button
                 onClick={() => {
-                  signInWithGoogle(location, history);
+                  signInWithGoogle(location, navigate);
                 }}
                 variant="contained"
                 className="login-btn"

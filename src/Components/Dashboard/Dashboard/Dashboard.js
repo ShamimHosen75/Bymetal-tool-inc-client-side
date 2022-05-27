@@ -12,10 +12,9 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import {
-  Link, Route, Routes, useRouteMatch
+  Link, Route, Routes, useMatch
 } from 'react-router-dom';
 import useFirebase from '../../../hooks/useFirebase';
-import logo from '../../../images/logo.png';
 import AddProduct from '../AddProduct/AddProduct';
 import BookingDash from '../BookingDash/BookingDash';
 import GetReview from '../GetReview/GetReview';
@@ -31,7 +30,7 @@ function Dashboard(props) {
   const { users,logOut } = useFirebase();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  let { path, url } = useRouteMatch();
+  let { path, url } = useMatch();
   const [admin, setAdmin] = useState({});
 
   
@@ -55,7 +54,7 @@ console.log(admin);
   const drawer = (
     <div>
       <Toolbar>
-        <img className="img-fluid logo w-100" src={logo} alt="" />
+        <h2>Bymetal Tool Inc.</h2>
       </Toolbar>
       <Divider />
       <ul>

@@ -22,20 +22,16 @@ const Blog = () => {
                     <br />
                 </div>
                 <div className='col-md'>
-                    <h3>What is a unit test? Why should write unit tests ?</h3>
-                    <p>Unit testing is a type of software testing where individual units or software components are tested. Its purpose is to validate that each unit of code performs as expected. A unit can be anything you want it to be — a line of code, a method, or a class.The more effort I put into testing the product conceptually at the start of the process, the less effort I had to put into manually testing the product at the end because fewer bugs would emerge as a result.
+                    <h3>Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts ?</h3>
+                    <p>When you without delay update the nation, it does now not change this. Nation right now. Instead, it creates a pending country transition, and getting access to it after calling this approach will simplest go back the present price. You will lose manage of the nation across all additives.UseState is without a doubt a nation updating characteristic. Const is used here because the alternate of price is being controlled some other place through React. You're telling React to manage a few cost for you by using calling useState.
                     </p>
                     <br />
                 </div>
                 <div className='col-md'>
-                    <h3>What is the purpose of jwt and how does it work?</h3>
-                    <p> A <strong>JWT</strong> is a mechanism to verify the owner of some JSON data. It’s an encoded, URL-safe string that can contain an unlimited amount of data (unlike a cookie) and is cryptographically signed.<br />
-                        Using JWTs for session tokens might seem like a good idea at first because: <br/> 
-                        1. You can store any kind of user details on the client<br/>
-                        2. The server can trust the client because the JWT is signed, and there is no need to call the database to retrieve the information you already stored in the JWT.<br/>
-                        3. You don’t need to coordinate sessions in a centralized database when you get to the eventual problem of horizontal scaling <br/>
-                        Ultimately, if you already have a database for your application, just use a sessions table and use regular sessions as provided by the server-side framework of choice
+                    <h3>What is a unit test? Why should write unit tests ?</h3>
+                    <p>Unit testing is a type of software testing where individual units or software components are tested. Its purpose is to validate that each unit of code performs as expected. A unit can be anything you want it to be — a line of code, a method, or a class.The more effort I put into testing the product conceptually at the start of the process, the less effort I had to put into manually testing the product at the end because fewer bugs would emerge as a result.
                     </p>
+                    <br />
                 </div>
             </div>
         </div>

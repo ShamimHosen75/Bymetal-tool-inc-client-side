@@ -1,41 +1,52 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Blog from './Components/Blog/Blog';
-import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
-import Login from './Components/Login/Login';
-import NotFound from './Components/NotFound/NotFound';
-import OrderDetails from './Components/OrderDetails/OrderDetails';
-import Explore from './Components/Pages/Explore/Explore/Explore';
-import Home from './Components/Pages/Home/Home/Home';
-import Register from './Components/Register/Register';
-import AuthProvider from './contexts/AuthProvider';
-import PrivateRoute from './PrivateRoute/PrivateRoute';
+import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
+import Blog from './pages/Blog/Blog';
+import AddProduct from './pages/Dashboard/AddProduct';
+import AddReveiw from './pages/Dashboard/AddReveiw';
+import Dashboard from './pages/Dashboard/Dashboard';
+import MakeAdmin from './pages/Dashboard/MakeAdmin';
+import ManageOrders from './pages/Dashboard/ManageOrders';
+import ManageProducts from './pages/Dashboard/ManageProducts';
+import MyOrders from './pages/Dashboard/MyOrders';
+import MyProfile from './pages/Dashboard/MyProfile';
+import Payment from './pages/Dashboard/Payment';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import RequireAdmin from './pages/Login/RequireAdmin';
+import RequireAuth from './pages/Login/RequireAuth';
+import SingUp from './pages/Login/SingUp';
+import MyPortofolio from './pages/MyPortofolio/MyPortofolio';
+import Purchase from './pages/Purchase/Purchase';
+import Navbar from './pages/shared/Navbar';
+import NotFound from './pages/shared/NotFound/NotFound';
 
 function App() {
   return (
-    <div className="App">
-      <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/home" element={<Home />}/>
-            <Route path="/orderDetails/:productId" element={
-              <PrivateRoute>
-                  <OrderDetails></OrderDetails>
-              </PrivateRoute>
-            }/>
-            <Route path="/explore" element={<Explore/>}/>
-            <Route path="/dashBoard" element={
-            <PrivateRoute>
-                <Dashboard/>
-            </PrivateRoute>
-            }/>
-            <Route path="/blog" element={<Blog/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element={<Register/>}/>
-            <Route path="*" element={<NotFound/>}/>
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
+    <div>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/purchase/:id" element={<RequireAuth><Purchase /></RequireAuth>}></Route>
+        <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path="payment/:id" element={<RequireAuth><Payment /></RequireAuth>}></Route>
+          <Route path='addReveiw' element={<AddReveiw></AddReveiw>}></Route>
+          <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
+          <Route path='manageOrders' element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
+          <Route path='manageProducts' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
+          <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
+        </Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/myPortofolio" element={<MyPortofolio></MyPortofolio>}></Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/singUp" element={<SingUp />} />
+        <Route path="*" element={<NotFound></NotFound>}></Route>
+      </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

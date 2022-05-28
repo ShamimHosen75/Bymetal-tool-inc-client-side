@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../../../Shared/Footer/Footer';
-import NavBar from '../../../Shared/Navbar/NavBar';
+import NavBar from '../../../Shared/Navbar/Navbar';
 import AllProducts from '../AllProducts/AllProducts';
 
 const Explore = () => {

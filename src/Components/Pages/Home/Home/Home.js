@@ -1,10 +1,10 @@
 import React from 'react';
-import NavBar from '../../../Shared/Navbar/NavBar';
 import Footer from '../../../Shared/Footer/Footer';
-import Products from '../Products/Products';
-import Reviews from '../Reviews/Reviews';
+import NavBar from '../../../Shared/Navbar/Navbar';
 import Banner from '../Banner/Banner';
 import Contact from '../Contact/Contact';
+import Products from '../Products/Products';
+import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
   return (

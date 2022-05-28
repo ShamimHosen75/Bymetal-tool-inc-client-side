@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import auth from "../../firebase.init"
-import { useSignInWithEmailAndPassword, useSignInWithGoogle, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import googleImage from "../../assets/google.png"
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import googleImage from "../../assets/google.png";
+import auth from "../../firebase.init";
 import useToken from '../Hooks/useToken';
-import Loading from '../shared/Loading/Loading';
 import Footer from '../shared/Footer';
+import Loading from '../shared/Loading/Loading';
 
 
 const Login = () => {

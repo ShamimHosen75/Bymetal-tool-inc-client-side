@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import auth from "../../firebase.init"
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import googleImage from "../../assets/google.png"
+import { Link, useNavigate } from 'react-router-dom';
+import googleImage from "../../assets/google.png";
+import auth from "../../firebase.init";
 import useToken from '../Hooks/useToken';
-import Loading from '../shared/Loading/Loading';
 import Footer from '../shared/Footer';
+import Loading from '../shared/Loading/Loading';
 
-const SingUp = () => {
+const SignUp = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -129,4 +129,4 @@ const SingUp = () => {
     );
 };
 
-export default SingUp;
+export default SignUp;

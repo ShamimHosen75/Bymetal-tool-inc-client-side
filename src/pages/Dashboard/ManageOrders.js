@@ -9,7 +9,7 @@ const ManageOrders = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://afternoon-retreat-54243.herokuapp.com/allOrders", {
+        fetch("https://damp-brushlands-62497.herokuapp.com/allOrders", {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -24,7 +24,7 @@ const ManageOrders = () => {
     }, [orderDeleteCount])
 
     const handleOrderDelete = (id) => {
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/orders/${id}`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -15,7 +15,7 @@ const CheckOutForm = ({ order }) => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/create-payment-intent`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/create-payment-intent`, {
             method: 'POST',
             headers: {
                 "content-type": "application/json",
@@ -83,7 +83,7 @@ const CheckOutForm = ({ order }) => {
                 quantity: quantity,
                 partsId: partsId
             }
-            fetch(`https://afternoon-retreat-54243.herokuapp.com/orders/${_id}`, {
+            fetch(`https://damp-brushlands-62497.herokuapp.com/orders/${_id}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json"

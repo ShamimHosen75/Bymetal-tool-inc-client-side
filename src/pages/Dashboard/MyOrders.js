@@ -13,7 +13,7 @@ const MyOrders = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/orders?email=${email}`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/orders?email=${email}`, {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -33,7 +33,7 @@ const MyOrders = () => {
     const handleOrderDelete = (id) => {
         const browserConfirm = window.confirm("Are you sure You want to delete");
         if (browserConfirm) {
-            fetch(`https://afternoon-retreat-54243.herokuapp.com/orders/${id}`, {
+            fetch(`https://damp-brushlands-62497.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

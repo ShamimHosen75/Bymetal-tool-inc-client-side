@@ -8,7 +8,7 @@ const Reveiw = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://afternoon-retreat-54243.herokuapp.com/reveiws")
+        fetch("https://damp-brushlands-62497.herokuapp.com/reveiws")
             .then(res => res.json())
             .then(data => {
                 setReveiws(data)

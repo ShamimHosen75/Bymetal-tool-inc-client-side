@@ -11,7 +11,7 @@ const MyProfile = () => {
     const [userUpdateStatus, setUserUpdateStatus] = useState(0);
 
     useEffect(() => {
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/user?email=${email}`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/user?email=${email}`, {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -30,7 +30,7 @@ const MyProfile = () => {
         const description = e.target.description.value;
         const newUser = { name, address, email, profession, description };
 
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/userUpdate?email=${email}`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/userUpdate?email=${email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

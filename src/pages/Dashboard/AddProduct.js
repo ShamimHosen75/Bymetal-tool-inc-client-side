@@ -13,7 +13,7 @@ const AddProduct = () => {
         const description = e.target.description.value;
         const newProduct = { name, price, image, quantity,description,minimumOrderQuantity };
 
-        fetch("https://afternoon-retreat-54243.herokuapp.com/parts", {
+        fetch("https://damp-brushlands-62497.herokuapp.com/parts", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

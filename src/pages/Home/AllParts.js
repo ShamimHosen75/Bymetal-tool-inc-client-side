@@ -6,10 +6,10 @@ const Products = () => {
 
     const [parts, setParts] = useState([]);
     const [loading, setLoading] = useState(true);
-
+console.log(parts);
     useEffect(() => {
         setLoading(true);
-        fetch("https://afternoon-retreat-54243.herokuapp.com/parts")
+        fetch("https://damp-brushlands-62497.herokuapp.com/parts/")
             .then(res => res.json())
             .then(data => {
                 setParts(data)

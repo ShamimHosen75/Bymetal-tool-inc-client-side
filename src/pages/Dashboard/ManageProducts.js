@@ -9,7 +9,7 @@ const ManageProducts = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://afternoon-retreat-54243.herokuapp.com/parts")
+        fetch("https://damp-brushlands-62497.herokuapp.com/parts")
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -19,7 +19,7 @@ const ManageProducts = () => {
     }, [partsCount])
 
     const handlePartsDelete = (id) => {
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/parts/${id}`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/parts/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

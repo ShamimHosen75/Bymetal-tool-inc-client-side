@@ -12,7 +12,7 @@ const AddReveiw = () => {
         const description = e.target.description.value;
         const newReveiw = { name, Address, image, rating,description };
 
-        fetch("https://afternoon-retreat-54243.herokuapp.com/reveiws", {
+        fetch("https://damp-brushlands-62497.herokuapp.com/reveiws", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ const MakeAdmin = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://afternoon-retreat-54243.herokuapp.com/allUser", {
+        fetch("https://damp-brushlands-62497.herokuapp.com/allUser", {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -26,7 +26,7 @@ const MakeAdmin = () => {
     }, [userDeleteCount, adminCreate])
 
     const handleUserDelete = (id) => {
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/user/${id}`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/user/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -38,7 +38,7 @@ const MakeAdmin = () => {
     }
 
     const handleUserAdmin = (email) => {
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

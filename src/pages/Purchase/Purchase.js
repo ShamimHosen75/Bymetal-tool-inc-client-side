@@ -23,7 +23,7 @@ const Purchase = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://afternoon-retreat-54243.herokuapp.com/parts/${id}`, {
+        fetch(`https://damp-brushlands-62497.herokuapp.com/parts/${id}`, {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -69,7 +69,7 @@ const Purchase = () => {
         }
 
         // user order 
-        fetch("https://afternoon-retreat-54243.herokuapp.com/orders", {
+        fetch("https://damp-brushlands-62497.herokuapp.com/orders", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

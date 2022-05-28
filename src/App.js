@@ -17,7 +17,7 @@ import Login from './pages/Login/Login';
 import RequireAdmin from './pages/Login/RequireAdmin';
 import RequireAuth from './pages/Login/RequireAuth';
 import SignUp from './pages/Login/SignUp';
-import MyPortofolio from './pages/MyPortofolio/MyPortofolio';
+import MyPortfolio from './pages/MyPortfolio/MyPortofolio';
 import Purchase from './pages/Purchase/Purchase';
 import Navbar from './pages/shared/Navbar';
 import NotFound from './pages/shared/NotFound/NotFound';
@@ -41,9 +41,9 @@ function App() {
           <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
         </Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
-        <Route path="/myPortofolio" element={<MyPortofolio></MyPortofolio>}></Route>
+        <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path="/login" element={<Login />} />
-        <Route path="/singUp" element={<SignUp />} />
+        <Route path="/signUp" element={<SignUp />} />
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer></ToastContainer>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MyPortofolio = () => {
+const MyPortfolio = () => {
     return (
         <div className='ml-32 my-5 p-8 bg-secondary text-white sm:w-4/6 rounded-md'>
             <p className='text-xl font-medium mb-2'>Hi There</p>
@@ -28,4 +28,4 @@ const MyPortofolio = () => {
     );
 };
 
-export default MyPortofolio;
+export default MyPortfolio;
